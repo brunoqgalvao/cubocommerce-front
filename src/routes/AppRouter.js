@@ -17,10 +17,6 @@ const AppRouter = props => {
     <LoadingWrapper isLoading={useSession().authLoading} >
     <Router history={history} >
       <Switch>
-      <Route exact path="/" component={Home} />
-      <PrivateRoute exact path="/login" component={Login} notAuth/>
-      <PrivateRoute exact path="/register" component={Register} notAuth/>
-      <Route exact path="/logout" component={Logout} />
       <PrivateRoute exact path="/dashboard" component={Dashboard} authLevel={1}/>
       <Route path="/" component={Home} />
       </Switch>

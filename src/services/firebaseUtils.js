@@ -6,13 +6,13 @@ import "firebase/firebase-storage";
 
 //For firebase config setting, you should use your own application's information.
 var config = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: "habi-38b8c.firebaseapp.com",
-  databaseURL: "https://habi-38b8c.firebaseio.com",
-  projectId: "habi-38b8c",
-  storageBucket: "habi-38b8c.appspot.com",
-  messagingSenderId: "66078401214",
-  appId: "1:66078401214:web:914e33a2a3ee8f13"
+  apiKey: "AIzaSyDbWAWRdANnLPXfMPJhlFqLiHVUPF9IIoA",
+  authDomain: "cubocommerce-b075b.firebaseapp.com",
+  databaseURL: "https://cubocommerce-b075b.firebaseio.com",
+  projectId: "cubocommerce-b075b",
+  storageBucket: "cubocommerce-b075b.appspot.com",
+  messagingSenderId: "638018439986",
+  appId: "1:638018439986:web:eac1e85d522bc45ef2652b"
 };
 
 class Firebase {
