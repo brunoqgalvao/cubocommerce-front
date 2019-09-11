@@ -1,21 +1,19 @@
 import React from "react";
-import { Container } from "@material-ui/core";
 import States from "./states/States";
 import Theme from "./services/Theme";
 import AppRouter from "./routes/AppRouter";
 import Alert from "./components/Alert/Alert";
-import LangButton from "./components/Utilities/LangButton/LangButton";
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 
 function App() {
   return (
     <Theme>
+      <CssBaseline/>
       <States>
-        <Container>
-          <LangButton />
           <AppRouter>  
           </AppRouter>
           <Alert />
-        </Container>
       </States>
     </Theme>
   );

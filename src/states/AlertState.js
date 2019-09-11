@@ -16,6 +16,16 @@ const AlertState = (props) => {
     setAlerts([...alerts, newAlert]);
     return id;
   }
+  const showForSeconds = (message,time, level) => {
+    const id=uuid();
+    if(level==null) level = 'default';
+    const newAlert = { id, message, level, show:true };
+    setAlerts([...alerts, newAlert]);
+    setTimeout(()=> {
+      setAlerts(alerts.filter(alert => alert.id !== id));
+    },time)
+  }
+
   // activate alert by id
   const activateById = (message,level,id) => {
     if(id==null) id=uuid();
@@ -38,6 +48,7 @@ const AlertState = (props) => {
       value={{
         alerts,
         show,
+        showForSeconds,
         hideAll,
         hideById
       }}>

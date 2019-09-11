@@ -1,12 +1,13 @@
 import React from 'react'
-import Header from '../../components/Header/Header';
+import FormHeader from './FormHeader/FormHeader';
 import FormBanner from './FormBanner/FormBanner';
 import FormItems from './FormItems/FormItems';
+import FormCheckout from './FormCheckout/FormCheckout';
 
 const OrderForm = () => {
   return (
     <>
-      <Header/>
+      <FormHeader/>
       <FormBanner/>
       <FormItems/>
       <FormCheckout/>

@@ -1,5 +1,5 @@
 import React from "react";
-import HabitState from "./HabitState";
+import ProductState from "./ProductState";
 import AuthState from "./AuthState";
 import AlertState from "./AlertState";
 import LangState from "./LangState";
@@ -11,9 +11,9 @@ const States = props => {
       <AlertState>
         <ModalState>
         <AuthState>
-          <HabitState>
+          <ProductState>
             {props.children}
-          </HabitState>
+          </ProductState>
         </AuthState>
         </ModalState>
       </AlertState>

@@ -10,7 +10,8 @@ const LoadingWrapper = props => {
   if (!isLoading) return <div> {props.children} </div>;
   else
     return (
-      <div className={classes.paper}>
+      <div className={classes.paper} style={{position:'relative'}}>
+        <img src='/assets/logoSemNome.png' alt="fazenda cubo" style={{height:'80px',width:'80px', position:'absolute', top:'37px'}}></img>
         <ClipLoader
           sizeUnit={"px"}
           size={120}
