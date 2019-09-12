@@ -8,7 +8,7 @@ const ProductState = (props) => {
       name: 'Rúcula Selvagem Americana 1 ',
       unit: "130g",
       description: "Essa rúcula é lorem ipsum do mal",
-      price: '9',
+      price: 9,
       imageUrl: "/assets/banner-1.jpg",
       available: 10,
       orderQty:0,
@@ -18,7 +18,7 @@ const ProductState = (props) => {
       name: 'Rúcula Selvagem Americana 2',
       unit: "130g",
       description: "Essa rúcula é lorem ipsum do mal",
-      price: '9',
+      price: 12,
       imageUrl: "/assets/banner-1.jpg",
       available: 10,
       orderQty:0,
@@ -26,8 +26,8 @@ const ProductState = (props) => {
       id: '04',
       name: 'Rúcula Selvagem Americana 3 ',
       unit: "130g",
-      description: "Essa rúcula é lorem ipsum do mal",
-      price: '9',
+      description: "Essa rúcula é lorem ipsum do masd asdkaçsl daçlsk dçalsk dçalksd çlaksd çlkasçdl kaçsd kaçsl dkaçal",
+      price: 8,
       imageUrl: "/assets/banner-1.jpg",
       available: 10,
       orderQty:0,
@@ -35,8 +35,38 @@ const ProductState = (props) => {
       id: '05',
       name: 'Rúcula Selvagem Americana 4 ',
       unit: "130g",
-      description: "Essa rúcula é lorem ipsum do mal",
-      price: '9',
+      description: "Essa rúcula é lorem ipsum d asçld açsdk çalsd alskdç alksdç alskd ço mal",
+      price: 12,
+      imageUrl: "/assets/banner-1.jpg",
+      available: 10,
+      orderQty:0,
+    },
+    {
+      id: '10',
+      name: 'Rúcula Selvagem Americana 4 ',
+      unit: "130g",
+      description: "Essa rúcula é lorem ipsum d asçld açsdk çalsd alskdç alksdç alskd ço mal",
+      price: 12,
+      imageUrl: "/assets/banner-1.jpg",
+      available: 10,
+      orderQty:0,
+    },
+    {
+      id: '06',
+      name: 'Rúcula Selvagem Americana 4 ',
+      unit: "130g",
+      description: "Essa rúcula é lorem ipsum d asçld açsdk çalsd alskdç alksdç alskd ço mal",
+      price: 12,
+      imageUrl: "/assets/banner-1.jpg",
+      available: 10,
+      orderQty:0,
+    },
+    {
+      id: '07',
+      name: 'Rúcula Selvagem Americana 4 ',
+      unit: "130g",
+      description: "Essa rúcula é lorem ipsum d asçld açsdk çalsd alskdç alksdç alskd ço mal",
+      price: 12,
       imageUrl: "/assets/banner-1.jpg",
       available: 10,
       orderQty:0,
@@ -68,13 +98,36 @@ const ProductState = (props) => {
     });
     setProducts(newProducts);
   }
+  const checkOutPrice = () => {
+    var total = 0;
+    for (let i = 0; i < products.length; i++) {
+      const product = products[i];
+      total += product.orderQty * product.price;
+    }
+    return total
+  }
+  const productsInBasket = () => {
+    const productsInBasket = products.filter(product => product.orderQty !== 0);
+    return productsInBasket
+  }
+  const numberOfItemsInBasket = () => {
+    var totalItems = 0;
+    for (let i = 0; i < products.length; i++) {
+      const product = products[i];
+      totalItems += product.orderQty;
+    }
+    return totalItems
+  }
 
   return (
     <ProductContext.Provider
       value={{
         products,
         placeOrder,
-        removeOrder
+        removeOrder,
+        checkOutPrice,
+        productsInBasket,
+        numberOfItemsInBasket,
       }}>
       {props.children}
     </ProductContext.Provider>

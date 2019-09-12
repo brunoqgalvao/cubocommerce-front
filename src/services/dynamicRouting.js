@@ -19,3 +19,7 @@ export const goToDashboard = () => {
 export const goToLogout = () => {
   history.push(`/logout`);
 }
+
+export const goToCheckout = () => {
+  history.push(`/checkout`)
+}

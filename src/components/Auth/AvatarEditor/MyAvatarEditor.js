@@ -11,7 +11,6 @@ import {
   Tooltip
 } from "@material-ui/core";
 import { styles } from "../../../services/styleProvider";
-import { flexbox } from "@material-ui/system";
 
 const MyAvatarEditor = props => {
   const { classes } = props;
