@@ -28,7 +28,7 @@ const Alert = props => {
       aria-describedby="alert-dialog-description"
     >
       <DialogTitle id="alert-dialog-title" className={classes.alertTitle}>
-        {dictionary.get("alertBoxTitle")}
+        {alert.title?alert.title:dictionary.get("alertBoxTitle")}
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
@@ -39,7 +39,7 @@ const Alert = props => {
             variant="contained"
             color="primary"
             className={classes.button}
-            onClick={() => handleClose(alert.id)}
+            onClick={() => {handleClose(alert.id);}}
           >
             OK
           </Button>

@@ -27,6 +27,7 @@ const onLogin =() => {
 }
 
   return (
+    <div className={classes.background}>
     <main className={classes.main}>
       <Paper className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -81,6 +82,7 @@ const onLogin =() => {
         </form>
       </Paper>
     </main>
+    </div>
   );
 }
 

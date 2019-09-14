@@ -48,7 +48,7 @@ export const dictionary = {
     },
     title : {
       us: 'Sign in',
-      br: "Entrar"
+      br: "Login"
     },
     confirmPasswordDoesntMatch:{
       us: "Password doesn't match with confirmation",
@@ -83,8 +83,7 @@ export const dictionary = {
       }
     }
   },
-  register:
-  {
+  register: {
     goBackToLogin: {
       us:"Go Back to login",
       br: "Voltar para o Login",
@@ -92,6 +91,36 @@ export const dictionary = {
     name: {
       us: "Name",
       br: "Nome",
+    },
+    phoneLabel: {
+      us: "Phone",
+      br: "Celular",
+    }
+  },
+  address: {
+    searchPlaceholder: {
+      us: "Search Address",
+      br: "Procurar Endereço..."
+    },
+    complementoLabel: {
+      us: "Additional info",
+      br: "Complemento"
+    },
+    nameLabel: {
+      us: "Address nickname",
+      br: "Apelido do endereço"
+    },
+    observacaoLabel: {
+      us: "Extra info",
+      br: "Observações"
+    },
+    saveAddress: {
+      us: "Save Address",
+      br: "Salvar Endereço",
+    },
+    newAddress: {
+      us: "New Address",
+      br: "Novo Endereço",
     }
   }
 }

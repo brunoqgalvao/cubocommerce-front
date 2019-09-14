@@ -1,13 +1,14 @@
 import React from "react";
-import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import CheckoutStepper from './Stepper/Stepper'
-import Login from './Login/Login'
+import CheckoutAddress from './CheckoutAddress/CheckoutAddress'
+import CheckoutPayment from './CheckoutPayment/CheckoutPayment'
+import CheckoutConfirmOrder from './CheckoutConfirmOrder/CheckoutConfirmOrder'
 
 const useStyles = makeStyles(theme => ({
   main: {
     backgroundColor: theme.palette.secondary.main,
-    height: '100vh',
+    minHeight: '100vh',
   }, 
   container : {
     display:'flex',
@@ -24,9 +25,9 @@ const Checkout = () => {
   return (
   <div className={classes.main}> 
   <CheckoutStepper>
-  <Container className={classes.container}>
-    <Login/>
-  </Container>
+    <CheckoutAddress/>
+    <CheckoutConfirmOrder/>
+    <CheckoutPayment/>
   </CheckoutStepper>
   </div> 
   );

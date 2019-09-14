@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import firebase from '../services/firebaseUtils';
-import { goToHome, goToRegister } from '../services/dynamicRouting';
+import { goToHome, goToRegister, goToCheckout } from '../services/dynamicRouting';
 import { useAlert } from './AlertState';
 
 
@@ -16,7 +16,8 @@ const AuthState = props => {
     user: null,
     isAuth:false,
     credential:null,
-    authLoading:true
+    authLoading:true,
+    authLevel:0,
     }
 
   const [state, setState] = useState(initialState);
@@ -25,16 +26,19 @@ const AuthState = props => {
     try {
       const res = await firebase.login(email, password);
       updateUser(res.user)
-      goToHome();
+      goToCheckout();
     } catch (err) {
       alert.show(err.message);
     }
   }
 
-  async function register(name,email,password) {
+  async function register(name,email,password,phone) {
     try {
       //The register in the Firebase class is running with useState data.
-      await firebase.register(name, email, password);
+      const user = await firebase.register(name, email, password);
+      await firebase.addPhone(phone);
+      console.log(user, "registered");
+      goToCheckout();
     } catch (err) {
       alert.show(err.message);
     }
@@ -79,7 +83,7 @@ const AuthState = props => {
         id: firebaseUser.uid,
         photoURL: firebaseUser.photoURL,
         auth:1,
-        firstName :firstName(firebaseUser.displayName)
+        firstName :() => firstName(firebaseUser.displayName)
       }
       setState({...state,user,isAuth:true, authLoading:false});
       return user
@@ -87,12 +91,14 @@ const AuthState = props => {
   }
   const firstName = (name) => {
     if(name){
-      const firstName = name.substr(0,name.indexOf(' ')); 
-      if(firstName.length != 0){
+      const firstName = name.substr(0,name.indexOf(' '));
+      if(firstName.length !== 0){
         return firstName;
-      }
     } else {
       return name;
+    }
+    } else {
+      return ""
     }
   }
 
@@ -112,7 +118,7 @@ const AuthState = props => {
         login,
         logout,
         register,
-        registerWithPicture,
+        registerWithPicture
         }}
     >
       {props.children}

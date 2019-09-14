@@ -1,6 +1,6 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import { goToHome } from './../services/dynamicRouting';
+import { Route, Redirect } from "react-router-dom";
+import { goToHome, goToLogin, goToAuth } from './../services/dynamicRouting';
 import { useSession } from "../states/AuthState";
 
 const PrivateRoute = ({ component: Component, authLevel, notAuth, ...rest }) => {
@@ -14,8 +14,9 @@ const PrivateRoute = ({ component: Component, authLevel, notAuth, ...rest }) => 
         if((notAuth && !isAuth) || (isAuth && (user.auth >= authLevel))) {
           return (<Component {...props} />)
         } else {
-          if(!notAuth) {alert('unauthorized')};
-          goToHome();
+          if(notAuth) {return <Redirect to="/" push />};
+          console.log('coming here')
+          goToAuth(true);
         }
       }}
     />

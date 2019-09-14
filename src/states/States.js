@@ -5,6 +5,7 @@ import AlertState from "./AlertState";
 import LangState from "./LangState";
 import ModalState from "./ModalState";
 import SnackbarState from "./SnackbarState";
+import AddressState from "./AddressState";
 
 const States = props => {
   return (
@@ -13,9 +14,9 @@ const States = props => {
         <SnackbarState>
           <ModalState>
             <AuthState>
-              <ProductState>
-                {props.children}
-              </ProductState>
+              <AddressState>
+                <ProductState>{props.children}</ProductState>
+              </AddressState>
             </AuthState>
           </ModalState>
         </SnackbarState>

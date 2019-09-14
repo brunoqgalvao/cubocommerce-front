@@ -24,6 +24,7 @@ const Snackbar = props => {
       ContentProps={{
         "aria-describedby": snackbar.id
       }}
+      onClick={()=> handleClose(snackbar.id)}
       message={<span id={snackbar.id}>{snackbar.message}</span>}
     />
   });

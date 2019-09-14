@@ -19,7 +19,27 @@ export const goToDashboard = () => {
 export const goToLogout = () => {
   history.push(`/logout`);
 }
+export const goToLoginWithLogout = () => {
+  history.push(`/login`);
+}
 
 export const goToCheckout = () => {
+  console.log('going to checkout')
   history.push(`/checkout`)
+}
+export const goToForm = () => {
+  history.push(`/`)
+}
+export const goToNewAddress = () => {
+  history.push(`/newaddress`)
+}
+export const goToAuth = (replace) => {
+  if(replace){
+  history.replace('/auth')
+  } else {
+    history.push(`/auth`)
+  }
+}
+export const goToConfirmPayment = () => {
+  history.push('/payment')
 }

@@ -20,7 +20,7 @@ const Logout = props => {
         <i className="fas fa-hand-peace"></i>
         </Avatar>
         <Typography component="h1" variant="h5">
-          Come back soon!
+          Volte Sempre
         </Typography>
         <Button
               fullWidth

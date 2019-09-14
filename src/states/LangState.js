@@ -3,7 +3,7 @@ import { dictionary } from './../services/dictionary'
 
 const LangState = (props) => {
 
-  const initialState = "us";
+  const initialState = "br";
   const [lang, setLang] = useState(initialState);
 
   // rebuild dictionary function "get" to get language automatically

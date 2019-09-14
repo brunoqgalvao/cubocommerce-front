@@ -14,7 +14,7 @@ const ProductState = (props) => {
       orderQty:0,
     },
     {
-      id: '03',
+      id: '02',
       name: 'Rúcula Selvagem Americana 2',
       unit: "130g",
       description: "Essa rúcula é lorem ipsum do mal",
@@ -84,7 +84,6 @@ const ProductState = (props) => {
         return product;
       }
     });
-    console.log(newProducts);
     setProducts(newProducts);
   }
   const removeOrder = (id) => {

@@ -6,7 +6,7 @@ import "firebase/firebase-storage";
 
 //For firebase config setting, you should use your own application's information.
 var config = {
-  apiKey: "AIzaSyDbWAWRdANnLPXfMPJhlFqLiHVUPF9IIoA",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "cubocommerce-b075b.firebaseapp.com",
   databaseURL: "https://cubocommerce-b075b.firebaseio.com",
   projectId: "cubocommerce-b075b",
@@ -59,16 +59,24 @@ class Firebase {
     });
   }
 
-  addFruit(fruit){
+  addPhone(phone){
     //user presence control
     if(!this.auth.currentUser){
-        return alert('Not authorized');
+        return false;
     }
-
     //Adding documents to the collection of pckurdu
-    return this.db.doc(`pckurdu/${this.auth.currentUser.uid}`).set({
-        fruit:fruit
+    return this.db.doc(`user/${this.auth.currentUser.uid}`).set({
+        phone:phone
     })
+  }
+  addAddress(address){
+    //user presence control
+    if(!this.auth.currentUser){
+      return false;
+  }     //Adding documents to the collection of pckurdu
+  return this.db.doc(`user/${this.auth.currentUser.uid}`).set({
+      address:address
+  })
   }
 }
 
