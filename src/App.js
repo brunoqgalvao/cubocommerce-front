@@ -35,6 +35,12 @@ function App() {
                 <meta name="msapplication-TileColor" content="#ffffff"/>
                 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
                 <meta name="theme-color" content="#ffffff"></meta>
+                <meta property="og:site_name" content="San Roque 2014 Pollos">
+                <meta property="og:title" content="Fazenda Cubo: Pronto para consumo" />
+                <meta property="og:description" content="Receba hortaliças ultra-frescas e prontas para consumo - produzidas perto da sua casa!" />
+                <meta property="og:image" itemprop="image" content="/favicon-96x96.png">
+                <meta property="og:type" content="website" />
+                <meta property="og:updated_time" content="1440432930" />
                 <script src={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&libraries=places`}></script>
             </Helmet>
           <AppRouter>  
