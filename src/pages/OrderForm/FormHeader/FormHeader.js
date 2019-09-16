@@ -5,6 +5,7 @@ import { AppBar, Modal } from '@material-ui/core';
 import HelpModal from './HelpModal/HelpModal';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import logo from './logoSemNome.png'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,7 +40,7 @@ const Header = () => {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
-            <img src={process.env.PUBLIC_URL + "/assets/logoSemNome.png"} alt="logo fazenda cubo" style={{height:'30px', position: "absolute", top:"10px", left:'15px'}}/>
+            <img src={logo} alt="logo fazenda cubo" style={{height:'30px', position: "absolute", top:"10px", left:'15px'}}/>
           <Typography variant="h6" className={classes.title}>
             Quinta (26/08) 
           </Typography>
