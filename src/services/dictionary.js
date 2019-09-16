@@ -122,5 +122,8 @@ export const dictionary = {
       us: "New Address",
       br: "Novo Endereço",
     }
+  },
+  authError:{
+    teste:'teste'
   }
 }
