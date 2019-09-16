@@ -22,11 +22,14 @@ const useStyles = makeStyles({
   },
 });
 
-export default function FormCard({product, handleAdd, handleRemove}) {
+export default function FormCard({product, handleAdd, handleRemove, handleClose}) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} style={{position:'relative'}}>
+      <IconButton onClick={handleClose} style={{position:'absolute', top:'2%', right:'3%', zIndex:2000}}>
+        <i class="fa fa-times" style={{color:'white'}} aria-hidden="true"></i>
+      </IconButton>
       <CardActionArea>
         <CardMedia
           className={classes.media}
