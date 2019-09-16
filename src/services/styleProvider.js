@@ -44,5 +44,11 @@ export const styles = theme => ({
   },
   modalStyle: {
     width: "80%"
+  },
+  helpFab: {
+    position:'fixed',
+    zIndex:'10000',
+    bottom:theme.spacing(2),
+    left:theme.spacing(1),
   }
 });

@@ -44,19 +44,12 @@ const Header = () => {
           <Typography variant="h6" className={classes.title}>
             Quinta (26/08) 
           </Typography>
-          <i onClick={() => modal.open("helpModal")} className="fa fa-question fa-1x" style={{height:'30px', position: "absolute", top:"18px", right:'15px'}}></i>
+          <i onClick={() => modal.open("helpModal")} className="fa fa-question fa-1x" style={{height:'30px', position: "absolute", top:"18px", right:'30px'}}></i>
         </Toolbar>
       </AppBar>
     </div>
     <div style={{height:"45px"}}>
     </div>
-    <Modal
-            className={classes.main}
-            open={modal.isOpen(`helpModal`)}
-            onClose={() => modal.close(`helpModal`)}
-          >
-    <HelpModal/>
-    </Modal>
     </>
   )
 }

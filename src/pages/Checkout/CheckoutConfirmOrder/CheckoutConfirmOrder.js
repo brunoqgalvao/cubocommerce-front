@@ -65,7 +65,7 @@ const CheckoutConfirmOrder = (props) => {
   };
 
   return (
-    <main className={classes.main}>
+    <main className={classes.main} style={{paddingBottom:'60px'}}>
       <Paper className={classes.paper}>
         <div className={innerClasses.headerIcon}>
           <i
@@ -73,7 +73,7 @@ const CheckoutConfirmOrder = (props) => {
             style={{ alignSelf: "center" }}
           ></i>
           <Typography variant="h5" style={{ marginTop: "8px" }}>
-            Carrinho
+            Cestinha :)
           </Typography>
         </div>
         <Table className={innerClasses.table} stickyheader size="small">

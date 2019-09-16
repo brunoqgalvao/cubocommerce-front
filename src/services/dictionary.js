@@ -124,6 +124,29 @@ export const dictionary = {
     }
   },
   authError:{
-    teste:'teste'
+    'auth/invalid-email':{
+      br:'E-mail inválido',
+    },
+    'auth/app-not-authorized': {
+      br: 'Desculpe, estamos com problemas. Tente novamente mais tarde'
+    },
+    'auth/invalid-api-key' :{
+      br: 'Desculpe, estamos com problemas. Tente novamente mais tarde'
+    },
+    'auth/network-request-failed' :{
+      br: 'Problemas em sua conexão, certifique-se que está conectado com a internet'
+    },
+    'auth/weak-password': {
+      br:"Sua senha deve ter ao menos 6 caracteres"
+    },
+    'authError.auth/email-already-in-use':{
+      br: "E-mail já registrado, não gostaria de fazer login?"
+    },
+    'auth/wrong-password':{
+      br: 'Senha incorreta'
+    },
+    "auth/user-not-found":{
+      br: 'Usuario não cadastrado. Registre-se!'
+    }
   }
 }

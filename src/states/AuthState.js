@@ -2,11 +2,13 @@ import React, { useState, useContext, useEffect } from "react";
 import firebase from '../services/firebaseUtils';
 import { goToHome, goToRegister, goToCheckout } from '../services/dynamicRouting';
 import { useAlert } from './AlertState';
+import { useDict } from './LangState';
 
 
 const AuthState = props => {
 
   const alert = useAlert();
+  const dictionary = useDict();
 
   // integrate login, register and logout with firebase
   // build firebase listener for changes on useffect
@@ -28,7 +30,9 @@ const AuthState = props => {
       updateUser(res.user)
       goToCheckout();
     } catch (err) {
-      alert.show(err.message);
+      console.log(err);
+      console.log(`authError.${err.code}`)
+      alert.show(dictionary.get(`authError.${err.code}`));
     }
   }
 
@@ -40,7 +44,7 @@ const AuthState = props => {
       console.log(user, "registered");
       goToCheckout();
     } catch (err) {
-      alert.show(err.message);
+      alert.show(dictionary.get(`authError.${err.code}`));
     }
   }
   async function uploadAndSaveProfilePicture(blob) {
@@ -49,7 +53,7 @@ const AuthState = props => {
       const user = await firebase.updatePhotoUrl(url);
       return user;
     } catch (err) {
-      alert.show(err.message);
+      alert.show(dictionary.get(`authError.${err.code}`));
     }
   }
 
@@ -68,7 +72,7 @@ const AuthState = props => {
       await firebase.logout();
       setState({...initialState, authLoading:false});
     } catch (err) {
-      alert.show(err.message);
+      alert.show(dictionary.get(`authError.${err.code}`));
     }
   }
 
