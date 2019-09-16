@@ -2,6 +2,7 @@ import React from "react";
 import { ClipLoader } from "react-spinners";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { styles } from "../../services/styleProvider";
+import logo from './LogoSemNome.png';
 
 const LoadingWrapper = props => {
   const { classes } = props;
