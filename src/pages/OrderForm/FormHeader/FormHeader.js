@@ -39,7 +39,7 @@ const Header = () => {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
-            <img src="./assets/logoSemNome.png" alt="logo fazenda cubo" style={{height:'30px', position: "absolute", top:"10px", left:'15px'}}/>
+            <img src={process.env.PUBLIC_URL + "/assets/logoSemNome.png"} alt="logo fazenda cubo" style={{height:'30px', position: "absolute", top:"10px", left:'15px'}}/>
           <Typography variant="h6" className={classes.title}>
             Quinta (26/08) 
           </Typography>
