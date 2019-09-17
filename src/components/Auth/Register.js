@@ -13,6 +13,7 @@ import {
   Input,
   InputLabel
 } from "@material-ui/core";
+import HelpFab from '../Utilities/HelpFab/HelpFab'
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { styles } from "../../services/styleProvider";
@@ -36,6 +37,8 @@ function Register(props) {
   }
 
   return (
+    <>
+    <HelpFab/>
     <div className={classes.background}>
       <main className={classes.main}>
         <Paper className={classes.paper}>
@@ -122,6 +125,7 @@ function Register(props) {
         </Paper>
       </main>
     </div>
+    </>
   );
 }
 

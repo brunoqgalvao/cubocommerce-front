@@ -10,7 +10,8 @@ const ModalState = (props) => {
   // show modal
   const open = (id) => {
     const newModal = { id };
-    setModals([...modals, newModal]);
+    const newModals = [...modals,newModal];
+    setModals(newModals);
     return id;
   }
   const isOpen = (id) => {
@@ -19,13 +20,20 @@ const ModalState = (props) => {
   }
 
   // hide all modals
-  const hideAll = () => {
+  const closeAll = () => {
     setModals([]);
   }
   // hide alert by id
   const close = (id) => {
+    console.log('close',id);
     const newModal = modals.filter(modal => modal.id !== id);
+    console.log('close',newModal);
     setModals(newModal);
+  }
+  const closeAndOpen = (id) => {
+    const newModal = { id };
+    setModals([newModal]);
+    return id;
   }
   return (
     <modalContext.Provider
@@ -33,7 +41,9 @@ const ModalState = (props) => {
         modals,
         open,
         close,
-        isOpen
+        isOpen,
+        closeAll,
+        closeAndOpen
       }}>
       {props.children}
     </modalContext.Provider>

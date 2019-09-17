@@ -3,6 +3,7 @@ import { useModal } from '../../../states/ModalState'
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Modal } from '@material-ui/core';
 import HelpModal from './HelpModal/HelpModal';
+import HelpFab from '../../../components/Utilities/HelpFab/HelpFab';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import logo from './LogoSemNome.png'
@@ -50,6 +51,7 @@ const Header = () => {
     </div>
     <div style={{height:"45px"}}>
     </div>
+    <HelpFab hide style={{display:'none'}}/>
     </>
   )
 }

@@ -11,6 +11,7 @@ import {
   Input,
   InputLabel
 } from "@material-ui/core";
+import HelpFab from '../Utilities/HelpFab/HelpFab'
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { styles } from "../../services/styleProvider";
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -27,6 +28,8 @@ const onLogin =() => {
 }
 
   return (
+    <>
+    <HelpFab/>
     <div className={classes.background}>
     <main className={classes.main}>
       <Paper className={classes.paper}>
@@ -83,6 +86,7 @@ const onLogin =() => {
       </Paper>
     </main>
     </div>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useModal } from '../../../../states/ModalState'
+import { useModal } from '../../../states/ModalState'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -28,13 +28,9 @@ const HelpModal = () => {
   
   const modal = useModal();
   const classes = useStyles();
-  const handleWhatsapp = () => {
-    window.open("https://api.whatsapp.com/send?phone=5511991625959");
-
-  }
 
   return (
-    <div className={classes.main} onClick={() => modal.close("helpModal")}>
+    <div className={classes.main} onClick={() => modal.close("feedbackModal")}>
   <Card className={classes.card}>
   <CardActionArea>
     <CardContent>
@@ -47,11 +43,8 @@ const HelpModal = () => {
     </CardContent>
   </CardActionArea>
   <CardActions>
-    <Button size="small" color="primary" onClick={handleWhatsapp}>
-      <a>Whatsapp</a>
-    </Button>
-    <Button size="small" color="primary" onClick={e=>{e.stopPropagation(); modal.closeAndOpen('feedbackModal')}}>
-      Mensagem
+    <Button size="small" color="primary">
+      Enviar Mensagem
     </Button>
   </CardActions>
 </Card>

@@ -42,7 +42,6 @@ const AppRouter = props => {
           <Route exact path="/logout" component={Logout}/>
           <Route path="/" component={Home} />
         </Switch>
-        <HelpFab/>
         {props.children}
       </Router>
     </LoadingWrapper>
