@@ -40,11 +40,11 @@ const Header = () => {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
-            <img src={logo} alt="logo fazenda cubo" style={{height:'30px', position: "absolute", top:"10px", left:'15px'}}/>
+            <img src={logo} alt="logo fazenda cubo" style={{height:'30px', position: "absolute", top:"10px", left:'4%'}}/>
           <Typography variant="h6" className={classes.title}>
             Quinta (26/08) 
           </Typography>
-          <i onClick={() => modal.open("helpModal")} className="fa fa-question fa-1x" style={{height:'30px', position: "absolute", top:"18px", right:'30px'}}></i>
+          <i onClick={() => modal.open("helpModal")} className="fa fa-question fa-1x" style={{height:'30px', position: "absolute", top:"18px", right:'7%'}}></i>
         </Toolbar>
       </AppBar>
     </div>

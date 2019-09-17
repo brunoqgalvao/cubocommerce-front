@@ -27,7 +27,6 @@ export default function FormCard({product, handleAdd, handleRemove, handleClose}
       <IconButton onClick={handleClose} style={{position:'absolute', top:'2%', right:'3%', zIndex:2000}}>
         <i class="fa fa-times" style={{color:'white'}} aria-hidden="true"></i>
       </IconButton>
-      <CardActionArea>
         <CardMedia
           className={classes.media}
           image={product.imageUrl}
@@ -44,7 +43,6 @@ export default function FormCard({product, handleAdd, handleRemove, handleClose}
             {product.description}
           </Typography>
         </CardContent>
-      </CardActionArea>
       <CardActions style={{justifyContent:'flex-end'}}>
           <IconButton variant="outlined" color="secondary" className={classes.button} onClick={handleRemove}><span style={{fontSize:'22pt'}}>-</span></IconButton>
           <span style={{fontWeight:'bold'}}>{product.orderQty}</span>
