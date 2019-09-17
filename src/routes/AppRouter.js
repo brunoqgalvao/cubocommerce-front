@@ -13,7 +13,6 @@ import Dashboard from "../pages/Dashboard";
 import { createBrowserHistory } from "history";
 import LoadingWrapper from "../components/Utilities/LoadingWrapper";
 import { useSession } from "../states/AuthState";
-import HelpFab from '../components/Utilities/HelpFab/HelpFab';
 
 export const history = createBrowserHistory();
 // Fazer protected route depois

@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { history } from "../routes/AppRouter.js";
 import { useAlert } from "./../states/AlertState";
 import { useProduct } from "./../states/ProductState";

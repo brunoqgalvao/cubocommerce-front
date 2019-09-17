@@ -1,6 +1,5 @@
 import React from "react";
 import { Snackbar as MUISnackbar} from '@material-ui/core'
-import { useDict } from "../../states/LangState";
 import { useSnackbar } from "../../states/SnackbarState";
 
 

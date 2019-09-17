@@ -5,9 +5,8 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import { Typography, ClickAwayListener } from '@material-ui/core';
 
 const useStyles = makeStyles({
   card: {
@@ -34,7 +33,9 @@ const HelpModal = () => {
   }
 
   return (
-    <div className={classes.main} onClick={() => modal.close("helpModal")}>
+    <div className={classes.main}>
+            <ClickAwayListener onClickAway={() => modal.close('feedbackModal')}>
+      
   <Card className={classes.card}>
   <CardActionArea>
     <CardContent>
@@ -48,13 +49,15 @@ const HelpModal = () => {
   </CardActionArea>
   <CardActions>
     <Button size="small" color="primary" onClick={handleWhatsapp}>
-      <a>Whatsapp</a>
+      Whatsapp
     </Button>
     <Button size="small" color="primary" onClick={e=>{e.stopPropagation(); modal.closeAndOpen('feedbackModal')}}>
       Mensagem
     </Button>
   </CardActions>
 </Card>
+</ClickAwayListener>
+
 </div>
 )
 }

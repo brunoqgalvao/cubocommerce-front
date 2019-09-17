@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import firebase from '../services/firebaseUtils';
-import { goToHome, goToRegister, goToCheckout } from '../services/dynamicRouting';
+import {  goToCheckout } from '../services/dynamicRouting';
 import { useAlert } from './AlertState';
 import { useDict } from './LangState';
 

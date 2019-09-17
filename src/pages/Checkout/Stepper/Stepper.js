@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { goToForm, goToHome, goToConfirmPayment } from "../../../services/dynamicRouting";
+import { goToForm, goToConfirmPayment } from "../../../services/dynamicRouting";
 import Button from "@material-ui/core/Button";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";

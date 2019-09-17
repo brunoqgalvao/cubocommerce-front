@@ -1,15 +1,10 @@
-import React, { useState } from "react";
-import { useAuth } from "../../../states/AuthState";
+import React from "react";
 import { useDict } from '../../../states/LangState';
 import { goToRegister, goToLogin } from '../../../services/dynamicRouting'
 import {
-  Typography,
   Paper,
   Avatar,
-  Button,
-  FormControl,
-  Input,
-  InputLabel
+  Button
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { styles } from "../../../services/styleProvider";

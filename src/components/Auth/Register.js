@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useAuth } from "../../states/AuthState";
-import { useAlert } from "../../states/AlertState";
-import { useModal } from "../../states/ModalState";
 import { useDict } from "./../../states/LangState";
 import { goToLogin } from "../../services/dynamicRouting";
 import {

@@ -1,18 +1,15 @@
 import React, { useState } from 'react'
 import { useProduct } from "../../../states/ProductState";
-import { useAuth } from "../../../states/AuthState";
-import { useDict } from '../../../states/LangState';
+// import { useAuth } from "../../../states/AuthState";
+// import { useDict } from '../../../states/LangState';
 import CreditCardInput from 'react-credit-card-input';
 import {
   Typography,
   Paper,
-  Avatar,
-  Button,
   FormControl,
   Input,
   InputLabel
 } from "@material-ui/core";
-import PaymentCard from 'react-payment-card-component'
 import { styles } from "../../../services/styleProvider";
 import withStyles from "@material-ui/core/styles/withStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
@@ -35,7 +32,7 @@ const CheckoutPayment = (props) => {
   const { checkOutPrice } = useProduct();
   const { classes } = props;
   const innerClasses = useStyles();
-  const dictionary = useDict();
+  // const dictionary = useDict();
   const total = checkOutPrice();
   const [cardNumber,setCardNumber] = useState()
   const [name,setName] = useState()

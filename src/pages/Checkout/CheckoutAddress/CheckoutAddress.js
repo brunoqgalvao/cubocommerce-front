@@ -44,12 +44,12 @@ const CheckoutAddress = props => {
         Bem vindo {firstName}!
       </Typography>
       <Typography variant="p">
-        <a
+        <Button
           onClick={() => modal.open("changeUser")}
           style={{ color: "green" }}
         >
           Não é você?
-        </a>
+        </Button>
       </Typography>
       </Paper>
       </main>

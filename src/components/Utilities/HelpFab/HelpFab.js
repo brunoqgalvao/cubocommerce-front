@@ -1,6 +1,5 @@
 import React from 'react'
 import { Fab, Typography, Modal} from '@material-ui/core';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import { styles } from '../../../services/styleProvider'
 import { withStyles } from '@material-ui/core/styles'
 import { useModal } from '../../../states/ModalState'

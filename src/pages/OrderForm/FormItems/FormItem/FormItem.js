@@ -1,5 +1,4 @@
 import React from "react";
-import { useAlert } from "../../../../states/AlertState";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "@material-ui/core/";
 import { useProduct } from "../../../../states/ProductState";
@@ -7,7 +6,7 @@ import { useModal } from "../../../../states/ModalState";
 import { useSnackbar } from "../../../../states/SnackbarState";
 import FormCard from "../FormCard/FormCard";
 import ListItem from "@material-ui/core/ListItem";
-import { Modal, Paper } from "@material-ui/core";
+import { Modal } from "@material-ui/core";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";

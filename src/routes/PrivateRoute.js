@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import { goToHome, goToLogin, goToAuth } from './../services/dynamicRouting';
+import { goToAuth } from './../services/dynamicRouting';
 import { useSession } from "../states/AuthState";
 
 const PrivateRoute = ({ component: Component, authLevel, notAuth, ...rest }) => {

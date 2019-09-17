@@ -1,4 +1,4 @@
-import React, { useState, useContext} from 'react'
+import React, { useState } from 'react'
 import firebase from './../services/firebaseUtils'
 
 const AddressState = (props) => {
@@ -38,7 +38,7 @@ export const useAddress = (id) => {
 
   React.useEffect(
     () => {
-      const unsubscribe = getAddress();
+      getAddress();
     },
     [id]
   )

@@ -1,8 +1,7 @@
 import React from 'react'
 import { useModal } from '../../../states/ModalState'
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Modal } from '@material-ui/core';
-import HelpModal from './HelpModal/HelpModal';
+import { AppBar } from '@material-ui/core';
 import HelpFab from '../../../components/Utilities/HelpFab/HelpFab';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
