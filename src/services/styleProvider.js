@@ -19,6 +19,7 @@ export const styles = theme => ({
   },
   paper: {
     marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(3),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

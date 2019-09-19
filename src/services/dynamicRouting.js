@@ -43,3 +43,9 @@ export const goToAuth = (replace) => {
 export const goToConfirmPayment = () => {
   history.push('/payment')
 }
+export const goBack = () => {
+  history.goBack();
+}
+export const goToFaq = () => {
+  history.push('/faq');
+}

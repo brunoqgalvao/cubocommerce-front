@@ -1,5 +1,6 @@
 import React from "react";
 import { useModal } from "../../../../states/ModalState";
+import { goToFaq } from '../../../../services/dynamicRouting';
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -71,6 +72,9 @@ const HelpModal = () => {
               }}
             >
               Mensagem
+            </Button>
+            <Button size="small" color="primary" onClick={()=>goToFaq()}>
+              Perguntas Frequentes
             </Button>
           </CardActions>
         </Card>

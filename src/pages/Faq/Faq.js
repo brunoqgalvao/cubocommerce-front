@@ -4,7 +4,9 @@ import QuestionItem from './QuestionItem/QuestionItem'
 import Logo from '../../components/Utilities/Logo/Logo'
 import {
   Typography,
-  Paper
+  Paper,
+  Container,
+  Button
 } from "@material-ui/core";
 import { styles } from "../../services/styleProvider";
 import { withStyles, makeStyles }  from "@material-ui/core/styles";
@@ -66,6 +68,13 @@ const Faq = (props) => {
       </Paper>
     </main>
     </div>
+    <Container
+        style={{ textAlign: "center", position: "fixed", bottom: "16px" }}
+      >
+        <Button variant="contained" color="primary" onClick={()=>goBack()}>
+          Voltar
+        </Button>
+      </Container>
     </>
   );
 }
