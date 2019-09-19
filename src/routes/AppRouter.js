@@ -3,6 +3,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../pages/Home";
 import Checkout from "../pages/Checkout/Checkout";
+import Faq from "../pages/Faq/Faq";
 import Login from "../components/Auth/Login";
 import Logout from "../components/Auth/Logout";
 import Register from "../components/Auth/Register";
@@ -39,6 +40,7 @@ const AppRouter = props => {
           <PrivateRoute exact path="/register" component={Register} notAuth/>
           <PrivateRoute exact path="/auth" component={LoginOrRegister} notAuth/>
           <Route exact path="/logout" component={Logout}/>
+          <Route exact path="/faq" component={Faq}/>
           <Route path="/" component={Home} />
         </Switch>
         {props.children}
