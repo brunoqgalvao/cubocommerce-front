@@ -2,17 +2,18 @@ import React from "react";
 import { ClipLoader } from "react-spinners";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { styles } from "../../services/styleProvider";
+import Logo from './Logo/Logo'
 import logo from './LogoSemNome.png';
 
 const LoadingWrapper = props => {
   const { classes } = props;
 
   const { isLoading } = props;
-  if (!isLoading) return <div> {props.children} </div>;
+  if (isLoading) return <div> {props.children} </div>;
   else
     return (
       <div className={classes.paper} style={{position:'relative'}}>
-        <img src={logo} alt="fazenda cubo" style={{height:'80px',width:'80px', position:'absolute', top:'37px'}}></img>
+        <Logo style={{position:'absolute',top:'37px'}}/>
         <ClipLoader
           sizeUnit={"px"}
           size={120}
